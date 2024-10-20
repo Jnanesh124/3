@@ -1356,6 +1356,7 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
                 await asyncio.sleep(DELETE_TIME)
                 await k.delete()
                 try:
+		    await asyncio.sleep(1000)
                     await message.delete()
                 except:
                     pass
@@ -1370,6 +1371,7 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
                 await asyncio.sleep(DELETE_TIME)
                 await k.delete()
                 try:
+		    await asyncio.sleep(1000)
                     await message.delete()
                 except:
                     pass
@@ -1386,6 +1388,7 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
                 await asyncio.sleep(DELETE_TIME)
                 await k.delete()
                 try:
+		    await asyncio.sleep(1000)
                     await message.delete()
                 except:
                     pass
@@ -1399,6 +1402,7 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
             await asyncio.sleep(DELETE_TIME)
             await k.delete()
             try:
+		await asyncio.sleep(1000)
                 await message.delete()
             except:
                 pass
@@ -1419,6 +1423,7 @@ async def advantage_spell_chok(message):
         await asyncio.sleep(60)
         await k.delete()
         try:
+	    await asyncio.sleep(1000)
             await message.delete()
         except:
             pass
@@ -1432,6 +1437,7 @@ async def advantage_spell_chok(message):
         await asyncio.sleep(120)
         await k.delete()
         try:
+	    await asyncio.sleep(1000)
             await message.delete()
         except:
             pass
@@ -1449,6 +1455,7 @@ async def advantage_spell_chok(message):
     await asyncio.sleep(120)
     await d.delete()
     try:
+	await asyncio.sleep(1000)
         await message.delete()
     except:
         pass
