@@ -1355,8 +1355,6 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
                 await delSticker(st)
                 await asyncio.sleep(DELETE_TIME)
                 await k.delete()
-                except:
-                    pass
             else:
                 await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024] + links + del_msg, reply_markup=InlineKeyboardMarkup(btn))                    
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
@@ -1367,8 +1365,6 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
                 await delSticker(st)
                 await asyncio.sleep(DELETE_TIME)
                 await k.delete()
-                except:
-                    pass
             else:
                 await message.reply_photo(photo=poster, caption=cap[:1024] + links + del_msg, parse_mode=enums.ParseMode.HTML, reply_markup=InlineKeyboardMarkup(btn))
         except Exception as e:
@@ -1381,8 +1377,6 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
                     print("error", e)
                 await asyncio.sleep(DELETE_TIME)
                 await k.delete()
-                except:
-                    pass
             else:
                 await message.reply_text(cap + links + del_msg, parse_mode=enums.ParseMode.HTML, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
     else:
@@ -1392,8 +1386,6 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
             await delSticker(st)
             await asyncio.sleep(DELETE_TIME)
             await k.delete()
-            except:
-                pass
     return            
 async def advantage_spell_chok(message):
     mv_id = message.id
@@ -1410,8 +1402,6 @@ async def advantage_spell_chok(message):
         k = await message.reply(script.I_CUDNT.format(message.from_user.mention))
         await asyncio.sleep(60)
         await k.delete()
-        except:
-            pass
         return
     if not movies:
         google = search.replace(" ", "+")
@@ -1421,8 +1411,6 @@ async def advantage_spell_chok(message):
         k = await message.reply_text(text=script.I_CUDNT.format(search), reply_markup=InlineKeyboardMarkup(button))
         await asyncio.sleep(120)
         await k.delete()
-        except:
-            pass
         return
     user = message.from_user.id if message.from_user else 0
     buttons = [[
@@ -1436,5 +1424,3 @@ async def advantage_spell_chok(message):
     d = await message.reply_text(text=script.CUDNT_FND.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(buttons), reply_to_message_id=message.id)
     await asyncio.sleep(120)
     await d.delete()
-    except:
-        pass
