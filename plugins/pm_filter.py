@@ -1355,9 +1355,6 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
                 await delSticker(st)
                 await asyncio.sleep(DELETE_TIME)
                 await k.delete()
-                try:
-		    await asyncio.sleep(1000)
-                    await message.delete()
                 except:
                     pass
             else:
@@ -1370,9 +1367,6 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
                 await delSticker(st)
                 await asyncio.sleep(DELETE_TIME)
                 await k.delete()
-                try:
-		    await asyncio.sleep(1000)
-                    await message.delete()
                 except:
                     pass
             else:
@@ -1387,9 +1381,6 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
                     print("error", e)
                 await asyncio.sleep(DELETE_TIME)
                 await k.delete()
-                try:
-		    await asyncio.sleep(1000)
-                    await message.delete()
                 except:
                     pass
             else:
@@ -1401,9 +1392,6 @@ async def auto_filter(client, msg, spoll=False , pm_mode = False):
             await delSticker(st)
             await asyncio.sleep(DELETE_TIME)
             await k.delete()
-            try:
-		await asyncio.sleep(1000)
-                await message.delete()
             except:
                 pass
     return            
@@ -1422,9 +1410,6 @@ async def advantage_spell_chok(message):
         k = await message.reply(script.I_CUDNT.format(message.from_user.mention))
         await asyncio.sleep(60)
         await k.delete()
-        try:
-	    await asyncio.sleep(1000)
-            await message.delete()
         except:
             pass
         return
@@ -1436,9 +1421,6 @@ async def advantage_spell_chok(message):
         k = await message.reply_text(text=script.I_CUDNT.format(search), reply_markup=InlineKeyboardMarkup(button))
         await asyncio.sleep(120)
         await k.delete()
-        try:
-	    await asyncio.sleep(1000)
-            await message.delete()
         except:
             pass
         return
@@ -1454,8 +1436,5 @@ async def advantage_spell_chok(message):
     d = await message.reply_text(text=script.CUDNT_FND.format(message.from_user.mention), reply_markup=InlineKeyboardMarkup(buttons), reply_to_message_id=message.id)
     await asyncio.sleep(120)
     await d.delete()
-    try:
-	await asyncio.sleep(1000)
-        await message.delete()
     except:
         pass
